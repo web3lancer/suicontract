@@ -191,7 +191,7 @@ module web3lancer::messaging_system {
         conversation.last_message_time = tx_context::epoch_timestamp_ms(ctx);
 
         // Update unread count for other participants
-        let i = 0;
+        let mut i = 0;
         let len = vector::length(&conversation.participants);
         while (i < len) {
             let participant = *vector::borrow(&conversation.participants, i);
@@ -224,7 +224,7 @@ module web3lancer::messaging_system {
 
         // Find reader's index
         let reader_index = 0;
-        let i = 0;
+        let mut i = 0;
         let len = vector::length(&conversation.participants);
         while (i < len) {
             if (*vector::borrow(&conversation.participants, i) == reader) {
@@ -239,7 +239,7 @@ module web3lancer::messaging_system {
         *unread_ref = 0;
 
         // Mark individual messages as read
-        let j = 0;
+        let mut j = 0;
         let msg_len = vector::length(&conversation.messages);
         while (j <= up_to_message_id && j < msg_len) {
             let message = vector::borrow_mut(&mut conversation.messages, j);

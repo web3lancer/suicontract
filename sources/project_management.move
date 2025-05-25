@@ -170,7 +170,7 @@ module web3lancer::project_management {
         
         // Create milestones
         let milestones = vector::empty<Milestone>();
-        let i = 0;
+        let mut i = 0;
         let len = vector::length(&milestone_titles);
         
         while (i < len) {
@@ -374,7 +374,7 @@ module web3lancer::project_management {
     // ===== Helper Functions =====
     
     fun all_milestones_approved(project: &Project): bool {
-        let i = 0;
+        let mut i = 0;
         let len = vector::length(&project.milestones);
         
         while (i < len) {
