@@ -74,14 +74,11 @@ sui client publish --gas-budget 100000000
 
 ### Contract Addresses (Testnet)
 
-After deployment, update these addresses:
-
-```
-UserProfile Registry: [TO_BE_DEPLOYED]
-ProjectRegistry: [TO_BE_DEPLOYED]
-ReputationRegistry: [TO_BE_DEPLOYED]
-MessagingRegistry: [TO_BE_DEPLOYED]
-```
+- **Package ID:** `0x1338a3eb832f3d71f34f9f0ac2637367228219a591e68ee46add2192e547c881`
+- **UserProfile Registry:** `0x39e0aaf986265e1c2657232a597555c8632014239cfcad3496912edcd38203cf`
+- **ProjectRegistry:** `0x4e9112b5dce9a53cefa48a039b66308bf8554ad982715215bce12436b1d7a17b`
+- **ReputationRegistry:** `0xe00f9e6b48f1a2079c320e8017112ae3caa698aee06e0d08534e719cdd5e8c2e`
+- **MessagingRegistry:** `0x04c4c65442c14df15ab1a27ffc0d8ac2ff74a77764871d68802c38cf5bd6636d`
 
 ## 📖 Usage Examples
 
