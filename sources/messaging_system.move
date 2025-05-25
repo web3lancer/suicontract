@@ -129,11 +129,11 @@ module web3lancer::messaging_system {
         let sender = tx_context::sender(ctx);
         assert!(sender != other_participant, E_CANNOT_MESSAGE_SELF);
 
-        let participants = vector::empty<address>();
+        let mut participants = vector::empty<address>();
         vector::push_back(&mut participants, sender);
         vector::push_back(&mut participants, other_participant);
 
-        let unread_count = vector::empty<u64>();
+        let mut unread_count = vector::empty<u64>();
         vector::push_back(&mut unread_count, 0);
         vector::push_back(&mut unread_count, 0);
 
@@ -223,7 +223,7 @@ module web3lancer::messaging_system {
         assert!(vector::contains(&conversation.participants, &reader), E_UNAUTHORIZED);
 
         // Find reader's index
-        let reader_index = 0;
+        let mut reader_index = 0;
         let mut i = 0;
         let len = vector::length(&conversation.participants);
         while (i < len) {

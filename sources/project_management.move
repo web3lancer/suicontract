@@ -169,7 +169,7 @@ module web3lancer::project_management {
         let escrow_balance = coin::into_balance(payment);
         
         // Create milestones
-        let milestones = vector::empty<Milestone>();
+        let mut milestones = vector::empty<Milestone>();
         let mut i = 0;
         let len = vector::length(&milestone_titles);
         
